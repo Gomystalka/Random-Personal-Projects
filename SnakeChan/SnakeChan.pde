@@ -181,7 +181,7 @@ public void spawnFood() {
     attempts++;
     int r = int(random(0, rows - 1));
     int c = int(random(0, cols - 1));
-    if (tiles[r][c] != TileState.SNAKE) {
+    if (tiles[r][c] != TileState.SNAKE && tiles[r][c] != TileState.SNAKE_HEAD) {
       tiles[r][c] = TileState.FOOD;
       foodPos = getNonGridPosition(r, c);
       foodHue = int(random(0, 255));
